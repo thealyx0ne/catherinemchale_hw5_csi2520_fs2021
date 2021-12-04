@@ -1,0 +1,39 @@
+{
+  "name": "homework5",
+  "version": "1.0.0",
+  "description": "homework 5 submission CSI 2520",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thealyx0ne/catherinemchale_hw5_csi2520_fs2021.git"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "homework5",
+    "hw5",
+    "vanillajs",
+    "html",
+    "css",
+    "ejs",
+    "mysql",
+    "nodejs",
+    "expressjs"
+  ],
+  "author": "Catherine McHale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thealyx0ne/catherinemchale_hw5_csi2520_fs2021/issues"
+  },
+  "homepage": "https://github.com/thealyx0ne/catherinemchale_hw5_csi2520_fs2021/#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+}
