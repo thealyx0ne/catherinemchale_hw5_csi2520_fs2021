@@ -9,13 +9,13 @@
 		<li><a href="../index.html"><i class="fas fa-home"></a></li>
 		<li><a href="resume.html">Resume</a></li>
 		<li><a href="funfacts.html">Fun Facts About Me</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="trivia.html">Trivia!</a></li>
 		
 	</ul>
 	<title>Homework 2 - Catherine McHale</title>
 	<link rel="stylesheet" href="../css/hw5.css">
 	<script src="https://kit.fontawesome.com/536725d146.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="../css/trivia.css">
+	<link rel="stylesheet" href="../css/hw5.css">
 
         <script src="../js/trivia.js" defer></script>
 </head>
@@ -24,50 +24,122 @@
 	<header>
         <h1>Trivia!</h1>
 	</header>
-	<p>Instructions: Type the corresponding letter of the answer you think is correct in the text box below. </p>
-	<form action="/url" method="post">
-		<label>Question 1:</label>
-			<p class="trivia_q">A)</p>
-			<p class="trivia_q">B)</p>
-			<p class="trivia_q">C)</p> <!--correct-->
-			<p class="trivia_q">D)</p>
-		<input type="text" name="answer1"></input>
+	<main>
+        <% var score=0;%>
 
-		<label>Question 2:</label>
-			<p class="trivia_q">A)</p> <!--correct-->
-			<p class="trivia_q">B)</p>
-			<p class="trivia_q">C)</p>
-			<p class="trivia_q">D)</p>
-		<input type="text" name="answer2"></input>
+            <h1>My Trivia</h1>
+            <section>
+                <ol id="quiz">
+                    <form action="/trivia/" method="post">
+                    <li>
+                        <h3>How many bones do shark have?</h3>
+                        <ol>
+                            <li>100 bones</li>
+                            <li>217 bones</li>
+                            <li>0 bones</li>
+                            <li>185 bones</li>
+                        </ol>
+                        <label for="userAnswer1">Enter Your Answer:</label>
+                        <input type="text" name="userAnswer1" id="userAnswer1"></input>
+                        <h3>
+                            <%= `You entered ${Answer1}`%>
+                                <% if (Answer1==3) { %>
+                                    <% score++; %>
+                                    
+                                        <%} %>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>What is aphantasia?</h3>
+                        <ol>
+                            <li>Inability to smell</li>
+                            <li>Inability to create mental pictures</li>
+                            <li>Inability to stand upright</li>
+                            <li>Inability to tell when you are hungry</li>
+                        </ol>
+                        <label for="userAnswer2">Enter Your Answer:</label>
+                        <input type="text" name="userAnswer2" id="userAnswer2"></input>
+                        <h3>
+                            <%= `You entered ${Answer2}`%>
+                                <% if (Answer2==2) { %>
+                                    <% score++; %>
+                                    
+                                        <%} %>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>Who was the first woman to win a Nobel Prize?</h3>
+                        <ol>
+                            <li>Grazia Deledda</li>
+                            <li>Bertha von Suttner</li>
+                            <li>Amelia Earhart</li>
+                            <li>Marie Curie</li>
+                        </ol>
+                        <label for="userAnswer3">Enter Your Answer:</label>
+                        <input type="text" name="userAnswer3" id="userAnswer3"></input>
+                        <h3>
+                            <%= `You entered ${Answer3}`%>
+                                <% if (Answer3==4) { %>
+                                    <% score++; %>
+                                    
+                                        <%} %>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>Which planet has the most gravity?</h3>
+                        <ol>
+                            <li>Saturn</li>
+                            <li>Jupiter</li>
+                            <li>Neptune</li>
+                            <li>Uranus</li>
+                        </ol>
+                        <label for="userAnswer4">Enter Your Answer:</label>
+                        <input type="text" name="userAnswer4" id="userAnswer4"></input>
+                        <h3>
+                            <%= `You entered ${Answer4}`%>
+                                <% if (Answer4==2) { %>
+                                    <% score++; %>
+                                    
+                                        <%} %>
 
-		<label>Question 3:</label>
-			<p class="trivia_q">A)</p>
-			<p class="trivia_q">B)</p>
-			<p class="trivia_q">C)</p>
-			<p class="trivia_q">D)</p> <!--correct-->
-		<input type="text" name="answer3"></input>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>What kind of farm did Dwight Schrute have on the show "The Office"?</h3>
+                        <ol>
+                            <li>Carrot farm</li>
+                            <li>Potato farm</li>
+                            <li>Beet farm</li>
+                            <li>Radish farm</li>
+                        </ol>
+                        <label for="userAnswer5">Enter Your Answer:</label>
+                        <input type="text" name="userAnswer5"  id="userAnswer5"></input>
+                        <h3>
+                            <%= `You entered ${Answer5}`%>
+                                <% if (Answer5==3) { %>
+                                    <% score++; %>
+                                    
+                                        <%} %>
+                        </h3>
+                    </li>
+                    <br>
+                    <button type="submit" id="submitAnswer">Submit Answers</button>
+                    </form>
+                </ol>
+                <div id="score">
+                    <h2>Your Total Score Is: </h2>
+                    <%= score%>
+                </div>
 
-		<label>Question 4:</label>
-			<p class="trivia_q">A)</p>
-			<p class="trivia_q">B)</p> <!--correct-->
-			<p class="trivia_q">C)</p>
-			<p class="trivia_q">D)</p>
-		<input type="text" name="answer4"></input>
-
-		<label>Question 5:</label>
-			<p class="trivia_q">A)</p>
-			<p class="trivia_q">B)</p>
-			<p class="trivia_q">C)</p> <!--correct-->
-			<p class="trivia_q">D)</p>
-		<input type="text" name="answer5"></input>
-		<button is="score" type="submit">See Your Score</button>
-	</form>
-
+            </section>
+		</main>
 
 	<hr>
+
 	<footer>
 	<p>Copyright 2021 &copy; Catherine McHale - Educational Only, No Commercial Value.</p>
 	<a id="footerlink" href="mailto:catherinemchale@oakland.edu">Email</a> <a id="footerlink2" href="http://instagram.com/cattlmchale">Instagram</a>
 	</footer>
+
 	</body>
 </html>

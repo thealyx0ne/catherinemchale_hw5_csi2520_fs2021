@@ -19,13 +19,27 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true})); //needed to parse html into a string format
 
 //establish ejs middleware
-app.use(express.json());
+app.use('view engine', 'ejs');
 app.use("/public", express.static(_dirname + "/public"));
 
 //routes
 app.get("/", (req, res) => {
     res.render("index");
 });
+
+app.get('funcats', (req, res) => {
+    res.render('./html/funfacts.ejs');
+});
+
+app.get('resume', (req, res) => {
+    res.render('./html/resume.ejs');
+});
+
+app.get('trivia', (req, res) => {
+    res.render('./html/trivia.ejs', {
+    
+    })
+})
 
 
 //set up server ports
